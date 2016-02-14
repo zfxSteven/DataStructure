@@ -25,7 +25,7 @@
 
 typedef int  ElemType;/* default element type is integer */
 #define MAC_LENGTH sizeof( int )
-#define _MAX_LNODE_ 100 //Every node max data number
+#define _MAX_LNODE_ 1 //Every node max data number
 
 /*cannot use  #define to forecast overflow */
 #if 0
@@ -42,14 +42,14 @@ typedef int  ElemType;/* default element type is integer */
 #endif 
 
 /*Structure Defination */
-typedef struct{
+typedef struct LNode{
     ElemType data[ _MAX_LNODE_ ];
     
     //LinearLength length;
-    int length; /*! ! !  overflow risk exist ! ! ! */
+    //int length; /*! ! !  overflow risk exist ! ! ! */
 
     struct LNode *next;
-}LNode, *LinkList;
+}LNode, * LinkList;
 //use LNode declare linear node
 //use LinkList declare a LNode pointer 
 #endif
